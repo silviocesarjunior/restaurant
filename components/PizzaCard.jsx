@@ -8,7 +8,7 @@ const PizzaCard = () => {
             <h1 className={styles.title}>Calabreza</h1>
             <span className={styles.price}>$19,90</span>
             <p className={styles.desc}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, ea necessitatibus distinctio voluptatum veritatis totam! Soluta, laborum qui corrupti ipsum cumque quos minus quaerat libero magnam magni autem et ea!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
             </p>
 
         </div>

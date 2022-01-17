@@ -6,14 +6,14 @@ const Cart = () => {
         <div className={styles.container}>
             <div className={styles.left}>
                 <table className={styles.table}>
-                    <tr className={styles.tr}>
+                    <tr className={styles.trTitle}>
                         <th>Product</th>
                         <th>Name</th>
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>total</th>
                     </tr>
-                    <tr>
+                    <tr className={styles.tr}>
                         <td>
                             <div className={styles.imgContainer}>
                                 <Image
@@ -42,7 +42,7 @@ const Cart = () => {
                             <span className={styles.total}>$39.80</span>
                         </td>
                     </tr>
-                    <tr>
+                    <tr className={styles.tr}>
                         <td>
                             <div className={styles.imgContainer}>
                                 <Image
