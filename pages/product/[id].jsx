@@ -1,6 +1,8 @@
 import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/cartSlice";
 
 const Product = () => {
     const [size, setSize] = useState(0);
@@ -11,6 +13,11 @@ const Product = () => {
         price: [19.9, 23.9, 27.9],
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     };
+    const dispatch = useDispatch();
+    const handleClick = () => {
+        dispatch(addProduct({ ...pizza }));
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.left}>
@@ -77,8 +84,10 @@ const Product = () => {
                     </div>
                 </div>
                 <div className={styles.add}>
-                    <input type="number" defaultValue={1} className={styles.quantity}/>
-                    <button className={styles.button}>Add to Cart</button>
+                    <input type="number" defaultValue={1} className={styles.quantity} />
+                    <button className={styles.button} onClick={handleClick}>
+                        Add to Cart
+                    </button>
                 </div>
             </div>
         </div>
